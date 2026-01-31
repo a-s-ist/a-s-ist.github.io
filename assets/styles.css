@@ -76,6 +76,19 @@ a:hover {
   border-bottom: 1px solid var(--border);
 }
 
+.hero .container {
+  position: relative;
+  padding-right: clamp(120px, 22vw, 200px);
+}
+
+.hero-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(120px, 18vw, 180px);
+  height: auto;
+}
+
 .hero .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -91,6 +104,14 @@ a:hover {
   margin: 0 0 0.5rem;
 }
 
+.hero .mission {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0136d8;
+  max-width: 48rem;
+}
+
 .hero .updated {
   color: var(--muted);
   margin: 0 0 1rem;
@@ -101,6 +122,14 @@ a:hover {
   font-size: 1.05rem;
   max-width: 50rem;
   margin: 0 0 1.5rem;
+}
+
+.hero .lead p {
+  margin: 0 0 0.75rem;
+}
+
+.hero .lead p:last-child {
+  margin-bottom: 0;
 }
 
 .cta-group {
@@ -218,6 +247,15 @@ a:hover {
 
 .section h2 {
   margin-top: 0;
+}
+
+#values h2 {
+  color: #0136d8;
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
 }
 
 .section h3 {
@@ -365,6 +403,19 @@ a:hover {
 
   .toc[data-open="true"] .toc-links {
     display: flex;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero .container {
+    padding-right: 0;
+  }
+
+  .hero-logo {
+    position: static;
+    display: block;
+    margin: 0 0 1rem auto;
+    width: clamp(120px, 40vw, 180px);
   }
 }
 
