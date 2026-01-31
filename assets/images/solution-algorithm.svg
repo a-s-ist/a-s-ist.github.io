@@ -1,0 +1,16 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Çü¿ã¢ë´êºà‹z">
+  <rect width="640" height="420" fill="#F5F7FB"/>
+  <rect x="40" y="40" width="560" height="340" rx="28" fill="#FFFFFF" stroke="#E3E7EF"/>
+  <rect x="90" y="90" width="220" height="18" rx="9" fill="#0136D8"/>
+  <rect x="90" y="120" width="360" height="10" rx="5" fill="#C9D4F5"/>
+  <rect x="90" y="140" width="300" height="10" rx="5" fill="#C9D4F5"/>
+  <circle cx="150" cy="230" r="28" fill="#EEF3FF" stroke="#0136D8" stroke-width="2"/>
+  <circle cx="260" cy="230" r="28" fill="#EEF3FF" stroke="#0136D8" stroke-width="2"/>
+  <circle cx="370" cy="230" r="28" fill="#EEF3FF" stroke="#0136D8" stroke-width="2"/>
+  <rect x="450" y="202" width="90" height="56" rx="12" fill="#EEF3FF" stroke="#0136D8" stroke-width="2"/>
+  <rect x="90" y="290" width="180" height="14" rx="7" fill="#0136D8" opacity="0.7"/>
+  <rect x="90" y="312" width="260" height="10" rx="5" fill="#C9D4F5"/>
+  <text x="90" y="170" font-family="Inter, 'Noto Sans JP', sans-serif" font-size="16" font-weight="600" fill="#0136D8">
+    Algorithm Development
+  </text>
+</svg>

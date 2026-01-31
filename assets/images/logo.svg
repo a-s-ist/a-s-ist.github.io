@@ -1,0 +1,8 @@
+<svg width="160" height="48" viewBox="0 0 160 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="a.s.ist">
+  <rect x="2" y="8" width="32" height="32" rx="8" fill="#0136D8"/>
+  <circle cx="18" cy="24" r="6" fill="#FFFFFF"/>
+  <rect x="22" y="18" width="8" height="12" rx="4" fill="#FFFFFF" opacity="0.7"/>
+  <text x="44" y="30" font-family="Inter, 'Noto Sans JP', sans-serif" font-size="20" font-weight="700" fill="#0136D8">
+    a.s.ist
+  </text>
+</svg>
