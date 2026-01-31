@@ -34,6 +34,18 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.7;
+  animation: page-fade 0.35s ease both;
+}
+
+@keyframes page-fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 body.solutions-flow {
@@ -296,7 +308,7 @@ a:hover {
 .site-nav {
   display: flex;
   justify-content: center;
-  gap: 1.25rem;
+  gap: 2.5rem;
   font-weight: 600;
 }
 
@@ -882,6 +894,9 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  body {
+    animation: none;
   }
 }
 
