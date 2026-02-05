@@ -173,18 +173,23 @@ body.solutions-flow {
 .solutions-flow .feature-card,
 .solutions-flow .spec-card,
 .solutions-flow .gallery figure,
-.solutions-flow .form-card {
+.solutions-flow .form-card,
+.home-page .card,
+.home-page .feature-card,
+.home-page .news-card {
   background: rgba(255, 255, 255, 0.88);
   border-color: rgba(1, 54, 216, 0.1);
   box-shadow: 0 20px 45px rgba(1, 54, 216, 0.08);
   backdrop-filter: blur(16px) saturate(140%);
 }
 
-.solutions-flow .card {
+.solutions-flow .card,
+.home-page .card {
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-.solutions-flow .card:hover {
+.solutions-flow .card:hover,
+.home-page .card:hover {
   transform: translateY(-6px);
   border-color: rgba(1, 54, 216, 0.35);
   box-shadow: 0 26px 60px rgba(1, 54, 216, 0.16);
@@ -469,6 +474,8 @@ a:hover {
   flex-direction: column;
   gap: 0.75rem;
   height: 100%;
+  position: relative;
+  cursor: pointer;
 }
 
 .card h3 {
@@ -485,6 +492,14 @@ a:hover {
   margin-top: auto;
   font-weight: 600;
   color: var(--primary);
+  text-decoration: none;
+}
+
+.card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
 .tag-list {
@@ -1171,7 +1186,9 @@ body.home-page {
 
 /* Home page sections need background for readability */
 .home-page .section-business,
+.home-page .section-solutions,
 .home-page .section-pickup,
+.home-page .section-news,
 .home-page .section-cta-full {
   position: relative;
   z-index: 2;

@@ -1,12 +1,3 @@
-<svg width="520" height="360" viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ãÑ¤×é¤ó¤áü¸">
-  <rect width="520" height="360" fill="#F5F7FB"/>
-  <rect x="32" y="32" width="456" height="296" rx="24" fill="#FFFFFF" stroke="#E3E7EF"/>
-  <rect x="70" y="110" width="80" height="80" rx="16" fill="#EEF3FF" stroke="#0136D8" stroke-width="2"/>
-  <rect x="200" y="110" width="80" height="80" rx="16" fill="#EEF3FF" stroke="#0136D8" stroke-width="2"/>
-  <rect x="330" y="110" width="80" height="80" rx="16" fill="#EEF3FF" stroke="#0136D8" stroke-width="2"/>
-  <line x1="150" y1="150" x2="200" y2="150" stroke="#0136D8" stroke-width="3"/>
-  <line x1="280" y1="150" x2="330" y2="150" stroke="#0136D8" stroke-width="3"/>
-  <rect x="70" y="210" width="160" height="10" rx="5" fill="#C9D4F5"/>
-  <rect x="70" y="228" width="200" height="10" rx="5" fill="#C9D4F5"/>
-  <rect x="70" y="246" width="140" height="10" rx="5" fill="#C9D4F5"/>
-</svg>
+version https://git-lfs.github.com/spec/v1
+oid sha256:9f31ad57285dbf8de7a3412224da1f4c7a47372daa19c5898e67edee61a8cea8
+size 973

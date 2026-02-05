@@ -43,7 +43,7 @@
   })();
 
   const config = {
-    particleCount: 45,            // 粒子数をさらに減らす
+    particleCount: 30,            // 粒子数を少なめに
     // 表現と計算コストのバランス
     maxFps: 30,
     dprScale: 0.55,               // 低解像度で描画（負荷削減）
@@ -78,6 +78,7 @@
     lastTime: 0,
     scaledPeaks: [],
     totalStrength: peaks.reduce((sum, p) => sum + p.strength, 0),
+    target: { x: 0, y: 0, strength: 0 },
   };
 
   // シンプルな乱数（Box-Muller不要、軽量）
@@ -160,6 +161,42 @@
     });
   };
 
+  // ブラウザ座標 → シミュレーション座標変換
+  const toSimCoords = (clientX, clientY) => {
+    const rect = canvas.getBoundingClientRect();
+    const scale = Math.min(1, (window.devicePixelRatio || 1) * config.dprScale);
+    const canvasX = (clientX - rect.left) * scale;
+    const canvasY = (clientY - rect.top) * scale;
+    const offsetX = (state.width - state.simWidth * config.viewScale) * 0.5;
+    const offsetY = (state.height - state.simHeight * config.viewScale) * 0.5;
+    return {
+      x: (canvasX - offsetX) / config.viewScale,
+      y: (canvasY - offsetY) / config.viewScale,
+    };
+  };
+
+  // イベントリスナー: マウス追従（PC）
+  // canvas は pointer-events: none のため document で捕捉
+  document.addEventListener("mousemove", (e) => {
+    const sim = toSimCoords(e.clientX, e.clientY);
+    state.target.x = sim.x;
+    state.target.y = sim.y;
+    state.target.strength = 1;
+  });
+
+  document.addEventListener("mouseleave", () => {
+    // 減衰に任せる（即座に切らない）
+  });
+
+  // イベントリスナー: タップ追従（スマホ）
+  document.addEventListener("touchstart", (e) => {
+    const touch = e.touches[0];
+    const sim = toSimCoords(touch.clientX, touch.clientY);
+    state.target.x = sim.x;
+    state.target.y = sim.y;
+    state.target.strength = 1;
+  }, { passive: true });
+
   const updateParticle = (p, step) => {
     const { pot, pullX, pullY } = calcPotentialAndPull(p.x, p.y);
 
@@ -180,9 +217,22 @@
     const fx = Math.cos(flowAngle) * config.flowStrength;
     const fy = Math.sin(flowAngle) * config.flowStrength;
 
+    // ターゲットへのごく微弱な引力（気づくか気づかないか程度）
+    let targetPullX = 0;
+    let targetPullY = 0;
+    const ts = state.target.strength;
+    if (ts > 0) {
+      const tdx = state.target.x - p.x;
+      const tdy = state.target.y - p.y;
+      const td2 = tdx * tdx + tdy * tdy;
+      const tForce = ts * 0.07 / (1 + td2 * 0.0003);
+      targetPullX = tdx * tForce;
+      targetPullY = tdy * tForce;
+    }
+
     // 速度更新（概念表現）
-    p.vx = p.vx * config.damping + (pullX * config.pullStrength + fx + nx) * step;
-    p.vy = p.vy * config.damping + (pullY * config.pullStrength + fy + ny) * step;
+    p.vx = p.vx * config.damping + (pullX * config.pullStrength + targetPullX + fx + nx) * step;
+    p.vy = p.vy * config.damping + (pullY * config.pullStrength + targetPullY + fy + ny) * step;
 
     const speed2 = p.vx * p.vx + p.vy * p.vy;
     const maxSpeed = config.maxSpeed;
@@ -233,6 +283,12 @@
 
     state.time += dt;
 
+    // ターゲット強度の減衰（操作停止後、モンテカルロに自然復帰）
+    if (state.target.strength > 0) {
+      state.target.strength *= 0.97;
+      if (state.target.strength < 0.01) state.target.strength = 0;
+    }
+
     // パーティクル更新・描画（拡大表示）
     ctx.lineCap = "butt";
     ctx.lineJoin = "miter";
@@ -279,8 +335,8 @@
 
     // パーティクル数を画面サイズに応じて調整
     config.particleCount = Math.min(
-      220,
-      Math.max(110, Math.floor((rect.width * rect.height) / 9000))
+      90,
+      Math.max(40, Math.floor((rect.width * rect.height) / 22000))
     );
     
     updateScaledPeaks();
