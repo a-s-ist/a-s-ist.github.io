@@ -1011,15 +1011,19 @@ a:hover {
     z-index: 9999;
   }
 
-  .menu-toggle[aria-expanded="true"] {
-    display: flex;
-    position: fixed;
+  .nav-close {
+    position: absolute;
     top: 1rem;
     right: 1rem;
-    z-index: 10000;
     width: 44px;
     height: 44px;
     background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 44px;
+    color: #0b1220;
+    z-index: 1;
   }
 
   .site-nav a {
