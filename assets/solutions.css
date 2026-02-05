@@ -1035,11 +1035,12 @@ a:hover {
     height: 3px;
     background: #0b1220;
     border-radius: 2px;
-    position: absolute;
+    margin: 4px auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   .nav-close span:nth-child(1) {
-    transform: rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
   }
 
   .nav-close span:nth-child(2) {
@@ -1047,7 +1048,7 @@ a:hover {
   }
 
   .nav-close span:nth-child(3) {
-    transform: rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .site-nav a {
