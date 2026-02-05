@@ -6,11 +6,11 @@
   var originalParent = nav.parentNode;
   var originalNext = nav.nextElementSibling;
 
-  // オーバーレイ用の閉じるボタンを作成
+  // オーバーレイ用の閉じるボタンを作成（ハンバーガーと同じ3本線→バツ）
   var closeBtn = document.createElement('button');
   closeBtn.className = 'nav-close';
   closeBtn.setAttribute('aria-label', '閉じる');
-  closeBtn.textContent = '\u00d7';
+  for (var i = 0; i < 3; i++) closeBtn.appendChild(document.createElement('span'));
 
   function openMenu() {
     document.body.appendChild(nav);

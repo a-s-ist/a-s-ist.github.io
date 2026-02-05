@@ -1015,15 +1015,38 @@ a:hover {
     position: absolute;
     top: 1rem;
     right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
+    padding: 0.5rem;
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 2rem;
-    line-height: 44px;
-    color: #0b1220;
     z-index: 1;
+  }
+
+  .nav-close span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #0b1220;
+    border-radius: 2px;
+    margin: 4px auto;
+  }
+
+  .nav-close span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-close span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-close span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .site-nav a {
