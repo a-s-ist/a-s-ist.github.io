@@ -1221,6 +1221,16 @@ body.home-page {
   border-radius: 0;
 }
 
+.news-image.has-default {
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.news-image.has-default img {
+  object-fit: contain;
+  padding: 1.5rem;
+}
+
 .article-hero-image {
   margin-bottom: 1.5rem;
   border-radius: var(--radius);
