@@ -1021,10 +1021,11 @@ a:hover {
     align-items: center;
     width: 44px;
     height: 44px;
-    padding: 0.5rem;
+    padding: 0;
     background: none;
     border: none;
     cursor: pointer;
+    overflow: visible;
     z-index: 1;
   }
 
@@ -1034,11 +1035,11 @@ a:hover {
     height: 3px;
     background: #0b1220;
     border-radius: 2px;
-    margin: 4px auto;
+    position: absolute;
   }
 
   .nav-close span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: rotate(45deg);
   }
 
   .nav-close span:nth-child(2) {
@@ -1046,7 +1047,7 @@ a:hover {
   }
 
   .nav-close span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: rotate(-45deg);
   }
 
   .site-nav a {
