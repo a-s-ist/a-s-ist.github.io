@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4b424207213415721caae143f5e5e7dfa0d7f943d7eea3ec9dfcf89241f8248f
-size 876
+<svg width="520" height="360" viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ÀÃ·åÜüÉ¤áü¸">
+  <rect width="520" height="360" fill="#F5F7FB"/>
+  <rect x="32" y="32" width="456" height="296" rx="24" fill="#FFFFFF" stroke="#E3E7EF"/>
+  <rect x="64" y="72" width="160" height="16" rx="8" fill="#0136D8"/>
+  <rect x="64" y="100" width="240" height="10" rx="5" fill="#C9D4F5"/>
+  <rect x="64" y="140" width="160" height="120" rx="16" fill="#EEF3FF"/>
+  <rect x="244" y="140" width="200" height="120" rx="16" fill="#EEF3FF"/>
+  <polyline points="260,220 290,200 320,210 350,180 380,200 410,170" fill="none" stroke="#0136D8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="64" y="280" width="120" height="10" rx="5" fill="#C9D4F5"/>
+  <rect x="64" y="296" width="180" height="10" rx="5" fill="#C9D4F5"/>
+</svg>

@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cdedc189da3e03e3426c713306237b6ebbf5b3ab635ecdab0ff2f77a99b01f92
-size 1078
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="p8å">
+  <rect width="640" height="420" fill="#F5F7FB"/>
+  <rect x="40" y="40" width="560" height="340" rx="28" fill="#FFFFFF" stroke="#E3E7EF"/>
+  <rect x="90" y="90" width="200" height="18" rx="9" fill="#0136D8"/>
+  <rect x="90" y="120" width="360" height="10" rx="5" fill="#C9D4F5"/>
+  <rect x="90" y="140" width="300" height="10" rx="5" fill="#C9D4F5"/>
+  <polyline points="90,250 150,240 210,230 270,210 330,240 390,200 450,260 510,180" fill="none" stroke="#0136D8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="450" cy="260" r="10" fill="#0136D8"/>
+  <circle cx="510" cy="180" r="10" fill="#0136D8"/>
+  <rect x="90" y="290" width="160" height="14" rx="7" fill="#0136D8" opacity="0.7"/>
+  <rect x="90" y="312" width="240" height="10" rx="5" fill="#C9D4F5"/>
+  <text x="90" y="230" font-family="Inter, 'Noto Sans JP', sans-serif" font-size="16" font-weight="600" fill="#0136D8">
+    Anomaly Detection
+  </text>
+</svg>
