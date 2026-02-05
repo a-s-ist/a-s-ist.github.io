@@ -1223,6 +1223,127 @@ body.home-page {
   line-height: 1.6;
 }
 
+.news-card a {
+  text-decoration: none;
+  color: inherit;
+  display: contents;
+}
+
+.news-card a:hover {
+  text-decoration: none;
+}
+
+.news-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.2rem;
+}
+
+.news-category.cat-news {
+  background: rgba(1, 54, 216, 0.08);
+  color: var(--primary);
+}
+
+.news-category.cat-press-release {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+.news-category.cat-media {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.news-category.cat-seminar {
+  background: rgba(139, 92, 246, 0.1);
+  color: #7c3aed;
+}
+
+.news-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.news-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--muted);
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-decoration: none;
+}
+
+.news-filter-btn:hover,
+.news-filter-btn.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  text-decoration: none;
+}
+
+/* Article detail page */
+.article-header {
+  margin-bottom: 2rem;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.article-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.article-content {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  line-height: 1.9;
+  color: var(--text);
+  max-width: 800px;
+}
+
+.article-content p {
+  margin: 0 0 1.2rem;
+}
+
+.article-content p:last-child {
+  margin-bottom: 0;
+}
+
+.article-content a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
 @media (max-width: 600px) {
   .news-card {
     grid-template-columns: 1fr;
@@ -1230,6 +1351,10 @@ body.home-page {
 
   .news-image {
     aspect-ratio: 16 / 9;
+  }
+
+  .article-content {
+    padding: 1.25rem;
   }
 
   .company-table th {
