@@ -1365,6 +1365,14 @@ body.home-page {
   margin-bottom: 0;
 }
 
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 1rem 0;
+}
+
 .article-content a {
   color: var(--primary);
   text-decoration: underline;
