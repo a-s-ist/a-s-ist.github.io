@@ -1225,7 +1225,6 @@ body.home-page {
   margin-bottom: 1.5rem;
   border-radius: var(--radius);
   overflow: hidden;
-  max-width: 800px;
 }
 
 .article-hero-image img {
@@ -1363,7 +1362,6 @@ body.home-page {
   box-shadow: var(--shadow);
   line-height: 1.9;
   color: var(--text);
-  max-width: 800px;
 }
 
 .article-content p {
