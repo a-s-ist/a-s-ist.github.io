@@ -1191,6 +1191,8 @@ body.home-page {
   padding: 1.25rem;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
 }
 
 .news-card:hover {
@@ -1258,13 +1260,19 @@ body.home-page {
   line-height: 1.6;
 }
 
-.news-card a {
+.news-title a {
   text-decoration: none;
   color: inherit;
-  display: contents;
 }
 
-.news-card a:hover {
+.news-title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.news-title a:hover {
   text-decoration: none;
 }
 
