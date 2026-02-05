@@ -1081,14 +1081,25 @@ body.home-page {
   margin-top: 1.5rem;
 }
 
-.client-logo-placeholder {
+.client-logo {
   background: rgba(255, 255, 255, 0.9);
-  border: 1px dashed rgba(1, 54, 216, 0.2);
+  border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 2rem 1rem;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.9rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+}
+
+.client-logo:hover {
+  box-shadow: var(--shadow);
+}
+
+.client-logo img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
 }
 
 @media (min-width: 640px) {
@@ -1099,7 +1110,7 @@ body.home-page {
 
 @media (min-width: 900px) {
   .client-logos {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
   
   .hero-logo {
