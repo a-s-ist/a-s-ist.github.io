@@ -1074,21 +1074,36 @@ body.home-page {
 }
 
 /* Client logos grid */
-.client-logos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+.client-logos-wrapper {
+  overflow: hidden;
   margin-top: 1.5rem;
+}
+
+.client-logos {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+.client-logos:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .client-logo {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   transition: box-shadow 0.2s;
 }
 
@@ -1097,21 +1112,12 @@ body.home-page {
 }
 
 .client-logo img {
-  max-width: 100%;
-  max-height: 60px;
+  height: 48px;
+  width: auto;
   object-fit: contain;
 }
 
-@media (min-width: 640px) {
-  .client-logos {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (min-width: 900px) {
-  .client-logos {
-    grid-template-columns: repeat(5, 1fr);
-  }
   
   .hero-logo {
     width: 180px;
