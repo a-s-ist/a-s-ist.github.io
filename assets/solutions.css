@@ -1225,6 +1225,7 @@ body.home-page {
   margin-bottom: 1.5rem;
   border-radius: var(--radius);
   overflow: hidden;
+  max-width: 800px;
 }
 
 .article-hero-image img {
