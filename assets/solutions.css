@@ -647,6 +647,16 @@ a:hover {
   background: var(--bg-alt);
   border-radius: 12px;
   border: 1px dashed rgba(1, 54, 216, 0.2);
+  overflow: hidden;
+}
+.member-photo.has-photo {
+  border: none;
+}
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .member-role {
