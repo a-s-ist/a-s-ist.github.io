@@ -45,7 +45,7 @@ body {
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
@@ -518,6 +518,32 @@ a:hover {
   font-size: 0.85rem;
 }
 
+/* ===== INDUSTRY COLOR TAGS ===== */
+.tag.tag-building   { background: #f0fdfa; border-color: #5eead4; color: #0d9488; }
+.tag.tag-steel      { background: #fff7ed; border-color: #fdba74; color: #c2410c; }
+.tag.tag-automotive { background: #eff6ff; border-color: #93c5fd; color: #1d4ed8; }
+.tag.tag-precision  { background: #f5f3ff; border-color: #c4b5fd; color: #7c3aed; }
+.tag.tag-metrology  { background: #ecfdf5; border-color: #6ee7b7; color: #059669; }
+
+/* ===== INDUSTRY COLOR ACCENT ON CARDS ===== */
+.card:has(.tag-building)   { border-top: 3px solid #14b8a6; }
+.card:has(.tag-steel)      { border-top: 3px solid #ea580c; }
+.card:has(.tag-automotive) { border-top: 3px solid #2563eb; }
+.card:has(.tag-precision)  { border-top: 3px solid #7c3aed; }
+.card:has(.tag-metrology)  { border-top: 3px solid #059669; }
+
+.card:has(.tag-building):hover   { border-color: rgba(20,184,166,0.45); border-top-color: #14b8a6; box-shadow: 0 26px 60px rgba(20,184,166,0.14); }
+.card:has(.tag-steel):hover      { border-color: rgba(234,88,12,0.45);  border-top-color: #ea580c; box-shadow: 0 26px 60px rgba(234,88,12,0.14); }
+.card:has(.tag-automotive):hover { border-color: rgba(37,99,235,0.45);  border-top-color: #2563eb; box-shadow: 0 26px 60px rgba(37,99,235,0.14); }
+.card:has(.tag-precision):hover  { border-color: rgba(124,58,237,0.45); border-top-color: #7c3aed; box-shadow: 0 26px 60px rgba(124,58,237,0.14); }
+.card:has(.tag-metrology):hover  { border-color: rgba(5,150,105,0.45);  border-top-color: #059669; box-shadow: 0 26px 60px rgba(5,150,105,0.14); }
+
+.card:has(.tag-building)   .card-link { color: #0d9488; }
+.card:has(.tag-steel)      .card-link { color: #c2410c; }
+.card:has(.tag-automotive) .card-link { color: #1d4ed8; }
+.card:has(.tag-precision)  .card-link { color: #7c3aed; }
+.card:has(.tag-metrology)  .card-link { color: #059669; }
+
 .breadcrumb {
   font-size: 0.85rem;
   color: var(--muted);
@@ -982,6 +1008,14 @@ a:hover {
 }
 
 @media (max-width: 600px) {
+  .home-page .site-header-home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
   .header-inner {
     grid-template-columns: auto 1fr auto;
     justify-items: start;
