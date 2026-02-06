@@ -39,7 +39,7 @@
         '</button>' +
         '<nav class="site-nav" aria-label="主要ナビゲーション">' +
           '<a href="' + base + 'index.html"' + (isActive('index.html') && !currentPage.includes('/solutions') && !currentPage.includes('/members') && !currentPage.includes('/company') && !currentPage.includes('/news') ? ' aria-current="page"' : '') + '>ホーム</a>' +
-          '<a href="' + base + 'solutions/index.html"' + (currentPage.includes('/solutions') || currentPage.includes('/cases') ? ' aria-current="page"' : '') + '>ソリューション・開発事例</a>' +
+          '<a href="' + base + 'solutions/index.html"' + (currentPage.includes('/solutions') || currentPage.includes('/cases') ? ' aria-current="page"' : '') + '>ソリューション・事例紹介</a>' +
           '<a href="' + base + 'members/index.html"' + (currentPage.includes('/members') ? ' aria-current="page"' : '') + '>メンバー</a>' +
           '<a href="' + base + 'company/index.html"' + (currentPage.includes('/company') ? ' aria-current="page"' : '') + '>会社情報</a>' +
           '<a href="' + base + 'news/index.html"' + (currentPage.includes('/news') ? ' aria-current="page"' : '') + '>ニュース</a>' +
@@ -60,7 +60,7 @@
         '<div>' +
           '<p class="footer-title">メニュー</p>' +
           '<div class="footer-links">' +
-            '<a href="' + base + 'solutions/index.html">ソリューション・開発事例</a>' +
+            '<a href="' + base + 'solutions/index.html">ソリューション・事例紹介</a>' +
             '<a href="' + base + 'members/index.html">メンバー</a>' +
             '<a href="' + base + 'company/index.html">会社情報</a>' +
             '<a href="' + base + 'news/index.html">ニュース</a>' +
