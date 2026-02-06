@@ -482,6 +482,14 @@ a:hover {
   cursor: pointer;
 }
 
+.card img {
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  width: 100%;
+  background: #f5f7fa;
+  border-radius: 0;
+}
+
 .card h3 {
   margin: 0;
   font-size: 1.1rem;
