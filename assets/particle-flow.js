@@ -371,5 +371,9 @@
     document.hidden ? stop() : start();
   });
 
-  start();
+  if (document.readyState === "complete") {
+    start();
+  } else {
+    window.addEventListener("load", start);
+  }
 })();
