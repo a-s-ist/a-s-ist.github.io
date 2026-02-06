@@ -1,0 +1,12 @@
+このプロジェクトのガイドラインは CLAUDE.md に記載されています。
+新しいページの作成・削除時は必ず CLAUDE.md の「必須チェックリスト」に従ってください。
+
+重要ポイント（詳細は CLAUDE.md 参照）:
+- 新規ページには Google Analytics タグ (G-6H4W7HWC57) を追加する
+- 新規ページには canonical タグを追加する（ベースURL: https://www.a-s-ist.com/）
+- 新規ページを sitemap.xml に追加する
+- ページ削除時は sitemap.xml から該当エントリを削除する
+- ヘッダー・フッターは既存ページと統一する
+- CSS は assets/solutions.css を共通使用
+- 画像は image/ ディレクトリに配置
+- コミットメッセージは日本語（feat: / fix: / docs: / style:）
