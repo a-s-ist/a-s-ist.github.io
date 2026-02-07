@@ -56,7 +56,7 @@
     damping: 0.1,                 // 速度減衰（低め＝毎ステップ方向が大きく変化）
     maxSpeed: 42.0,               // 最大速度（大きく）
     fadeAlpha: 0.018,             // トレイルの長さ
-    lineAlpha: 0.85,              // 流れの線の濃さ
+    lineAlpha: 0.95,              // 流れの線の濃さ
     tailScale: 1.4,               // 速度に対する線の長さ
     lineWidthScale: 1.1,          // 線の太さスケール
     resampleProb: 0.003,          // 低重み粒子の再配置
