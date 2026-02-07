@@ -552,7 +552,7 @@ a:hover {
 .card.sol-report    .card-link { color: #4338ca; }
 .card.sol-algorithm .card-link { color: #7c3aed; }
 
-/* ===== SOLUTION COLOR ACCENT ON CASE STUDY CARDS ===== */
+/* ===== SOLUTION COLOR ACCENT ON USE CASE CARDS ===== */
 .card:has(.tag-sol-spectrum)  { border-top: 3px solid #059669; }
 .card:has(.tag-sol-anomaly)   { border-top: 3px solid #2563eb; }
 .card:has(.tag-sol-report)    { border-top: 3px solid #4338ca; }
